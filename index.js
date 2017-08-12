@@ -161,9 +161,11 @@ console.log("this is userchoice " + userchoice);
   $( "#buttonc" ).click(function() {
     if(cbool === true){
     $( ".c" ).css( "color", "black" );
+    if(word.includes("c")){
     userchoice.push('c')
     console.log(userchoice);
     winner()
+  }
     if (!word.includes("c")) {
       loselives();
       $(".wordsused").append(`<h3><center>C</center></h3>`);
@@ -176,9 +178,11 @@ console.log("this is userchoice " + userchoice);
   $( "#buttond" ).click(function() {
     if(dbool === true){
     $( ".d" ).css( "color", "black" );
+    if(word.includes("d")){
     userchoice.push('d')
     console.log(userchoice);
     winner()
+  }
     if (!word.includes("d")) {
       loselives();
       $(".wordsused").append(`<h3><center>D</center></h3>`);
