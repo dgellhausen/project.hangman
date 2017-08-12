@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $("#object2, #object3, #object4, #object5, #object6, #object7, #object8").hide()
 var abool = true;
 var bbool = true;
 var cbool = true;
@@ -26,7 +27,9 @@ var xbool = true;
 var ybool = true;
 var zbool = true;
 var win = 0;
-var userchoice = []
+var userchoice = [];
+var wrongChoice = 0;
+var cssMan = ["#object2", "#object3", "#object4", "#object5", "#object6", "#object7", "#object8"]
 
 var word;
 var words = ['pantry', 'beast', 'computer', 'spaghetti', 'library'];
@@ -35,6 +38,9 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
        't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var lives = 10;
+
+
+
 if(wordselected == "pantry"){
   word=['p', 'a', 'n', 't', 'r', 'y'];
   if(win == word.length){
@@ -49,15 +55,31 @@ if(wordselected == "pantry"){
 }else if(wordselected == "library"){
   word=['l', 'i', 'b', 'r', 'a', 'r', 'y'];
 }
+
+
 function loselives(){
   lives = lives - 1;
   $( "#amountlives" ).empty();
   $( "#amountlives" ).append("Lives: " + lives);
+  $("#object8j").show()
   if(lives == 0){
     alert("Game Over");
   }
 }
 
+
+function winner() {
+for (var i = 0; i < userchoice.length; i++) {
+  if (userchoice.length === word.length) {
+    alert("winner");
+    return window.location.reload();
+    }
+  }
+}
+
+function showcssman() {
+
+}
 
 
 $( "#amountlives" ).append("Lives: " + lives);
@@ -79,9 +101,9 @@ $( "#amountlives" ).append("Lives: " + lives);
      completedWord = word.length;
   }
 
-console.log(completedWord);
-console.log(word);
-console.log(userchoice);
+console.log("this is completeWord " + completedWord);
+console.log("this is word " + word);
+console.log("this is userchoice " + userchoice);
 
 
 
@@ -89,6 +111,8 @@ console.log(userchoice);
     if(abool === true){
     $( ".a" ).css( "color", "black" );
     userchoice.push('a')
+    console.log(userchoice);
+    winner()
     if (!word.includes("a")) {
       loselives()
     $(".wordsused").append(`<h3><center>A</center></h3>`);
@@ -104,6 +128,9 @@ console.log(userchoice);
   $( "#buttonb" ).click(function() {
     if(bbool === true){
     $( ".b" ).css( "color", "black" );
+    userchoice.push('b')
+    console.log(userchoice);
+    winner();
     if (!word.includes("b")) {
       loselives();
       $(".wordsused").append(`<h3><center>B</center></h3>`);
@@ -120,6 +147,9 @@ console.log(userchoice);
   $( "#buttonc" ).click(function() {
     if(cbool === true){
     $( ".c" ).css( "color", "black" );
+    userchoice.push('c')
+    console.log(userchoice);
+    winner()
     if (!word.includes("c")) {
       loselives();
       $(".wordsused").append(`<h3><center>C</center></h3>`);
@@ -135,6 +165,9 @@ console.log(userchoice);
   $( "#buttond" ).click(function() {
     if(dbool === true){
     $( ".d" ).css( "color", "black" );
+    userchoice.push('d')
+    console.log(userchoice);
+    winner()
     if (!word.includes("d")) {
       loselives();
       $(".wordsused").append(`<h3><center>D</center></h3>`);
@@ -149,6 +182,9 @@ console.log(userchoice);
   $( "#buttone" ).click(function() {
     if(ebool === true){
     $( ".e" ).css( "color", "black" );
+    userchoice.push('e')
+    console.log(userchoice);
+    winner()
     if (!word.includes("e")) {
       loselives();
       $(".wordsused").append(`<h3><center>E</center></h3>`);
@@ -345,6 +381,9 @@ console.log(userchoice);
   $( "#buttons" ).click(function() {
     if(sbool === true){
     $( ".s" ).css( "color", "black" );
+    userchoice.push('s')
+    console.log(userchoice);
+    winner()
     if (!word.includes("s")) {
       loselives();
       $(".wordsused").append(`<h3><center>S</center></h3>`);
@@ -359,6 +398,9 @@ console.log(userchoice);
   $( "#buttont" ).click(function() {
     if(tbool === true){
     $( ".t" ).css( "color", "black" );
+    userchoice.push('t')
+    console.log(userchoice);
+    winner()
     if (!word.includes("t")) {
       loselives();
       $(".wordsused").append(`<h3><center>T</center></h3>`);
