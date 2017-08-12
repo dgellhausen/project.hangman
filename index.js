@@ -26,7 +26,6 @@ var wbool = true;
 var xbool = true;
 var ybool = true;
 var zbool = true;
-var win = 0;
 var userchoice = [];
 var wrongChoice = 0;
 var cssMan = ["#object2", "#object3", "#object4", "#object5", "#object6", "#object7", "#object8"]
@@ -43,9 +42,6 @@ var lives = 10;
 
 if(wordselected == "pantry"){
   word=['p', 'a', 'n', 't', 'r', 'y'];
-  if(win == word.length){
-    alert("youw win");
-  }
 }else if(wordselected == "beast"){
   word=['b', 'e', 'a', 's', 't'];
 }else if(wordselected == "computer"){
@@ -72,7 +68,7 @@ function winner() {
 for (var i = 0; i < userchoice.length; i++) {
   if (userchoice.length === word.length) {
     alert("winner");
-    return window.location.reload();
+    return window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
     }
   }
 }
@@ -116,10 +112,7 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("a")) {
       loselives()
     $(".wordsused").append(`<h3><center>A</center></h3>`);
-  }else if (word.includes("a")){
-    win + 1;
-  }
-    else if(abool === false){
+  }else if(abool === false){
       return null;
     }
     abool = false;
@@ -134,11 +127,7 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("b")) {
       loselives();
       $(".wordsused").append(`<h3><center>B</center></h3>`);
-    }else if (word.includes("b")){
-      win + 1;
-    }
-
-    else if(bbool === false){
+    }else if(bbool === false){
       return null;
     }
     bbool = false;
@@ -153,14 +142,11 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("c")) {
       loselives();
       $(".wordsused").append(`<h3><center>C</center></h3>`);
-    }else if (word.includes("c")){
-      win + 1;
-    }
     cbool = false;
   }else if(cbool === false){
     return null;
   }
-
+}
 });
   $( "#buttond" ).click(function() {
     if(dbool === true){
@@ -171,212 +157,206 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("d")) {
       loselives();
       $(".wordsused").append(`<h3><center>D</center></h3>`);
-    }else if (word.includes("d")){
-      win + 1;
-    }
     dbool = false;
   }else if(dbool === false){
     return null;
   }
+}
 });
   $( "#buttone" ).click(function() {
     if(ebool === true){
     $( ".e" ).css( "color", "black" );
     userchoice.push('e')
-    console.log(userchoice);
     winner()
     if (!word.includes("e")) {
       loselives();
       $(".wordsused").append(`<h3><center>E</center></h3>`);
-    }else if (word.includes("e")){
-      win + 1;
-    }
     ebool = false;
   }else if(ebool === false){
     return null;
   }
+}
 });
   $( "#buttonf" ).click(function() {
     if(fbool === true){
     $( ".f" ).css( "color", "black" );
+    userchoice.push('f')
+    winner()
     if (!word.includes("f")) {
       loselives();
-      $(".wordsused").append(`<h3><center>F</center></h3>`);
-    }else if (word.includes("f")){
-      win + 1;
-    }
     fbool = false;
   }else if(fbool === false){
     return null;
   }
+}
 });
   $( "#buttong" ).click(function() {
     if(gbool === true){
     $( ".g" ).css( "color", "black" );
+    userchoice.push('g')
+    winner()
     if (!word.includes("g")) {
       loselives();
       $(".wordsused").append(`<h3><center>G</center></h3>`);
-    }else if (word.includes("g")){
-      win + 1;
-    }
     gbool = false;
   }else if(gbool === false){
     return null;
   }
+}
 });
   $( "#buttonh" ).click(function() {
     if(hbool === true){
     $( ".h" ).css( "color", "black" );
+    userchoice.push('h')
+    winner()
     if (!word.includes("h")) {
       loselives();
       $(".wordsused").append(`<h3><center>H</center></h3>`);
-    }else if (word.includes("h")){
-      win + 1;
-    }
     hbool = false;
   }else if(hbool === false){
     return null;
   }
+}
 });
   $( "#buttoni" ).click(function() {
     if(ibool === true){
     $( ".i" ).css( "color", "black" );
+    userchoice.push('i')
+    winner()
     if (!word.includes("i")) {
       loselives();
       $(".wordsused").append(`<h3><center>I</center></h3>`);
-    }else if (word.includes("i")){
-      win + 1;
-    }
     ibool = false;
   }else if(ibool === false){
     return null;
   }
+}
 });
   $( "#buttonj" ).click(function() {
     if(jbool === true){
     $( ".j" ).css( "color", "black" );
+    userchoice.push('j')
+    winner()
     if (!word.includes("j")) {
       loselives();
       $(".wordsused").append(`<h3><center>J</center></h3>`);
-    }else if (word.includes("j")){
-      win + 1;
-    }
     jbool = false;
   }else if(jbool === false){
     return null;
   }
+}
 });
   $( "#buttonk" ).click(function() {
     if(kbool === true){
     $( ".k" ).css( "color", "black" );
+    userchoice.push('k')
+    winner()
     if (!word.includes("k")) {
       loselives();
       $(".wordsused").append(`<h3><center>K</center></h3>`);
-    }else if (word.includes("k")){
-      win + 1;
-    }
     kbool = false;
   }else if(kbool === false){
     return null;
   }
+}
 });
   $( "#buttonl" ).click(function() {
     if(lbool === true){
     $( ".l" ).css( "color", "black" );
+    userchoice.push('l')
+    winner()
     if (!word.includes("l")) {
       loselives();
       $(".wordsused").append(`<h3><center>L</center></h3>`);
-    }else if (word.includes("l")){
-      win + 1;
-    }
     lbool = false;
   }else if(lbool === false){
     return null;
   }
+}
 });
   $( "#buttonm" ).click(function() {
     if(mbool === true){
     $( ".m" ).css( "color", "black" );
+    userchoice.push('m')
+    winner()
     if (!word.includes("m")) {
       loselives();
       $(".wordsused").append(`<h3><center>M</center></h3>`);
-    }else if (word.includes("m")){
-      win + 1;
-    }
     mbool = false;
   }else if(mbool === false){
     return null;
   }
+}
 });
   $( "#buttonn" ).click(function() {
     if(nbool === true){
     $( ".n" ).css( "color", "black" );
+    userchoice.push('n')
+    winner()
     if (!word.includes("n")) {
       loselives();
       $(".wordsused").append(`<h3><center>N</center></h3>`);
-    }else if (word.includes("n")){
-      win + 1;
-    }
     nbool = false;
   }else if(nbool === false){
     return null;
   }
+}
 });
   $( "#buttono" ).click(function() {
     if(obool === true){
     $( ".o" ).css( "color", "black" );
+    userchoice.push('o')
+    winner()
     if (!word.includes("o")) {
       loselives();
       $(".wordsused").append(`<h3><center>O</center></h3>`);
-    }else if (word.includes("o")){
-      win + 1;
-    }
     obool = false;
   }else if(obool === false){
     return null;
   }
+}
 });
   $( "#buttonp" ).click(function() {
     if(pbool === true){
     $( ".p" ).css( "color", "black" );
+    userchoice.push('p')
+    winner()
     if (!word.includes("p")) {
       loselives();
       $(".wordsused").append(`<h3><center>P</center></h3>`);
-    }else if (word.includes("p")){
-      win + 1;
-    }
     pbool = false;
   }else if(pbool === false){
     return null;
   }
+}
 });
   $( "#buttonq" ).click(function() {
     if(qbool === true){
     $( ".q" ).css( "color", "black" );
+    userchoice.push('q')
+    winner()
     if (!word.includes("q")) {
       loselives();
       $(".wordsused").append(`<h3><center>Q</center></h3>`);
-    }else if (word.includes("q")){
-      win + 1;
-    }
     qbool = false;
   }else if(qbool === false){
     return null;
   }
+}
 });
   $( "#buttonr" ).click(function() {
     if(rbool === true){
     $( ".r" ).css( "color", "black" );
+    userchoice.push('r')
+    winner()
     if (!word.includes("r")) {
       loselives();
       $(".wordsused").append(`<h3><center>R</center></h3>`);
-    }else if (word.includes("r")){
-      win + 1;
-    }
     rbool = false;
   }else if(rbool === false){
     return null;
   }
+}
 });
   $( "#buttons" ).click(function() {
     if(sbool === true){
@@ -387,13 +367,11 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("s")) {
       loselives();
       $(".wordsused").append(`<h3><center>S</center></h3>`);
-    }else if (word.includes("s")){
-      win + 1;
-    }
     sbool = false;
   }else if(sbool === false){
     return null;
   }
+}
 });
   $( "#buttont" ).click(function() {
     if(tbool === true){
@@ -404,97 +382,95 @@ console.log("this is userchoice " + userchoice);
     if (!word.includes("t")) {
       loselives();
       $(".wordsused").append(`<h3><center>T</center></h3>`);
-    }else if (word.includes("t")){
-      win + 1;
-    }
     tbool = false;
   }else if(tbool === false){
     return null;
   }
+}
 });
   $( "#buttonu" ).click(function() {
     if(ubool === true){
     $( ".u" ).css( "color", "black" );
+    userchoice.push('u')
+    winner()
     if (!word.includes("u")) {
       loselives();
       $(".wordsused").append(`<h3><center>U</center></h3>`);
-    }else if (word.includes("u")){
-      win + 1;
-    }
     ubool = false;
   }else if(ubool === false){
     return null;
   }
+}
 });
   $( "#buttonv" ).click(function() {
     if(vbool === true){
     $( ".v" ).css( "color", "black" );
+    userchoice.push('v')
+    winner()
     if (!word.includes("v")) {
       loselives();
       $(".wordsused").append(`<h3><center>V</center></h3>`);
-    }else if (word.includes("v")){
-      win + 1;
-    }
     vbool = false;
   }else if(vbool === false){
     return null;
   }
+}
 });
   $( "#buttonw" ).click(function() {
     if(wbool === true){
     $( ".w" ).css( "color", "black" );
+    userchoice.push('w')
+    winner()
     if (!word.includes("w")) {
       loselives();
       $(".wordsused").append(`<h3><center>W</center></h3>`);
-    }else if (word.includes("w")){
-      win + 1;
-    }
     wbool = false;
   }else if(wbool === false){
     return null;
   }
+}
 });
   $( "#buttonx" ).click(function() {
     if(xbool === true){
     $( ".x" ).css( "color", "black" );
+    userchoice.push('x')
+    winner()
     if (!word.includes("c")) {
       loselives();
       $(".wordsused").append(`<h3><center>X</center></h3>`);
-    }else if (word.includes("x")){
-      win + 1;
-    }
     xbool = false;
   }else if(xbool === false){
     return null;
   }
+}
 });
   $( "#buttony" ).click(function() {
     if(ybool === true){
     $( ".y" ).css( "color", "black" );
+    userchoice.push('y')
+    winner()
     if (!word.includes("y")) {
       loselives();
       $(".wordsused").append(`<h3><center>Y</center></h3>`);
-    }else if (word.includes("y")){
-      win + 1;
-    }
     ybool = false;
   }else if(ybool === false){
     return null;
   }
+}
 });
   $( "#buttonz" ).click(function() {
     if(zbool === true){
     $( ".z" ).css( "color", "black" );
+    userchoice.push('z')
+    winner()
     if (!word.includes("z")) {
       loselives();
       $(".wordsused").append(`<h3><center>Z</center></h3>`);
-    }else if (word.includes("z")){
-      win + 1;
-    }
     zbool = false;
   }else if(zbool === false){
     return null;
   }
+}
 });
 
 
