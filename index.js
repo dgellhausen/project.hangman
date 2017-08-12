@@ -54,7 +54,27 @@ function loselives(){
   $( "#amountlives" ).empty();
   $( "#amountlives" ).append("Lives: " + lives);
   if(lives == 0){
+    $("#object11").show()
     alert("Game Over");
+  }
+  if(lives == 9) {
+    $("#object2").show()
+  } else if(lives == 8) {
+    $("#object3").show()
+  } else if(lives == 7) {
+    $("#object4").show()
+  } else if(lives == 6) {
+    $("#object5").show()
+  } else if(lives == 5) {
+    $("#object6").show()
+  } else if(lives == 4) {
+    $("#object7").show()
+  } else if(lives == 3) {
+    $("#object8").show()
+  } else if(lives == 2) {
+    $("#object9").show()
+  } else if(lives ==1) {
+    $("#object10").show()
   }
 }
 
@@ -82,7 +102,6 @@ $( "#amountlives" ).append("Lives: " + lives);
 console.log(completedWord);
 console.log(word);
 console.log(userchoice);
-
 
 
   $( "#buttona" ).click(function() {
@@ -454,6 +473,10 @@ console.log(userchoice);
     return null;
   }
 });
+
+$(".CSSMan").hide()
+$("#object1").show()
+
 
 
 
